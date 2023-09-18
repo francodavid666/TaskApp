@@ -1,5 +1,7 @@
 import axios from "axios";
 
+URL = ''
+
 if(process.env.NODE_ENV === "production"){
   URL =  import.meta.env.VITE_BACKEND_URL
 }else{
