@@ -144,3 +144,5 @@ CORS_ORIGIN_WHITELIST = ['http://localhost:5173']
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
+
+CSRF_TRUSTED_ORIGINS = ["http://*","https://tasksapi.up.railway.app"]
