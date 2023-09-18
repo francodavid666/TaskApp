@@ -1,9 +1,16 @@
 import axios from "axios";
+
+if(process.env.NODE_ENV === "production"){
+  URL =  import.meta.env.VITE_BACKEND_URL
+}else{
+  URL = " http://localhost:8000"
+}
+  
   
 
 console.log(URL);
 const tasksApi = axios.create({
-  baseURL: `https://tasksapi.up.railway.app/tasks/api/v1/tasks`,
+  baseURL: `${URL}/tasks/api/v1/tasks`,
 });
 
 export const getAllTasks = () => tasksApi.get("/");
