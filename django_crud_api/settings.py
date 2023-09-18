@@ -72,7 +72,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "django_crud_api.wsgi.application"
 
 # Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databasess  s
+# https://docs.djangoproject.com/en/4.1/ref/settings/#databasess s s
 
 # DATABASES = {
 #     "default": {
