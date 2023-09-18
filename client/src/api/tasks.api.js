@@ -1,11 +1,9 @@
 import axios from "axios";
-
-const URL ="https://tasksapi.up.railway.app"
   
 
 console.log(URL);
 const tasksApi = axios.create({
-  baseURL: `${URL}/tasks/api/v1/tasks`,
+  baseURL: `https://tasksapi.up.railway.app/tasks/api/v1/tasks`,
 });
 
 export const getAllTasks = () => tasksApi.get("/");
