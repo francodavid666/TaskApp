@@ -1,9 +1,7 @@
 import axios from "axios";
 
-const URL =
-  process.env.NODE_ENV === "production"
-    ? "https://tasksapi.up.railway.app"
-    : "http://localhost:8000";
+const URL ="https://tasksapi.up.railway.app"
+  
 
 console.log(URL);
 const tasksApi = axios.create({
