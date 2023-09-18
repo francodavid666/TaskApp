@@ -72,7 +72,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "django_crud_api.wsgi.application"
 
 # Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databasess  s
+# https://docs.djangoproject.com/en/4.1/ref/settings/#databases  s
 
 # DATABASES = {
 #     "default": {
@@ -80,12 +80,17 @@ WSGI_APPLICATION = "django_crud_api.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
-DATABASE_URL = 'PGPASSWORD=HXJMKqdiaQEQQ8Lofn9R psql -h containers-us-west-183.railway.app -U postgres -p 5498 -d railway'
 
 DATABASES = {
-    "default":
-    dj_database_url.config(default="sqlite:///" +
-                           os.path.join(BASE_DIR, "db.sqlite3"))
+    "default":{
+        'ENGINE':'django.db.backends.postgresql',
+        'NAME':'railway',
+        'USER':'postgres',
+        'PASSWORD':'HXJMKqdiaQEQQ8Lofn9R',
+        'HOST':'containers-us-west-183.railway.app',
+        'PORT':'5498',
+    }
+ 
 }
 
 # Password validation
@@ -140,7 +145,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:5173']
+CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
