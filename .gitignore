@@ -5,3 +5,8 @@ staticfiles/
 
 # environment variables
 .env.local
+venv
+__pycache__
+db.sqlite3
+staticfiles
+.env
