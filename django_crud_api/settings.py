@@ -84,8 +84,7 @@ DATABASE_URL = 'PGPASSWORD=HXJMKqdiaQEQQ8Lofn9R psql -h containers-us-west-183.r
 
 DATABASES = {
     "default":
-    dj_database_url.config(default="sqlite:///" +
-                           os.path.join(BASE_DIR, "db.sqlite3"))
+    dj_database_url.config(default="sqlite://db.sqlite3")
 }
 
 # Password validation
