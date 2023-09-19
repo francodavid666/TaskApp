@@ -2,7 +2,7 @@ import axios from "axios";
 
 const URL =
   process.env.NODE_ENV === "production"
-    ? import.meta.env.VITE_BACKEND_URL
+    ? "https://tasksapi.up.railway.app"
     : "http://localhost:8000";
 
 console.log(URL);
