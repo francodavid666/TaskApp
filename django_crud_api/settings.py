@@ -80,6 +80,9 @@ WSGI_APPLICATION = "django_crud_api.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
+
+
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # Por ejemplo, para PostgreSQL
@@ -90,6 +93,14 @@ DATABASES = {
         'PORT': '5498',  # Cambia esto al puerto de tu base de datos si es diferente
     }
 }
+
+'''
+DATABASES = {
+    "default":
+    dj_database_url.config(default="sqlite:///" +
+                           os.path.join(BASE_DIR, "db.sqlite3"))
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
