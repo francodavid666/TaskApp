@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'HXJMKqdiaQEQQ8Lofn9R',
-        'HOST': 'localhost',  # Cambia esto al host de tu base de datos si es diferente
+        'HOST': 'containers-us-west-183.railway.app',  # Cambia esto al host de tu base de datos si es diferente
         'PORT': '5498',  # Cambia esto al puerto de tu base de datos si es diferente
     }
 }

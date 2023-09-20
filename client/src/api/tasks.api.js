@@ -1,7 +1,8 @@
 import axios from "axios";
 
 
-const URL =  'https://tasksapi.up.railway.app'
+const URL = process.env.NODE_ENV === 'production' ?  
+import.meta.env.VITE_BACKEND_URL :'http://127.0.0.1:8000' 
 
 console.log(URL)
 const tasksApi = axios.create(
