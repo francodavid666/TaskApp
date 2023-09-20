@@ -74,15 +74,22 @@ WSGI_APPLICATION = "django_crud_api.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases  s
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 DATABASES = {
-     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-     }
- }
-
-
-
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',  # Por ejemplo, para PostgreSQL
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'HXJMKqdiaQEQQ8Lofn9R',
+        'HOST': 'localhost',  # Cambia esto al host de tu base de datos si es diferente
+        'PORT': '5498',  # Cambia esto al puerto de tu base de datos si es diferente
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
