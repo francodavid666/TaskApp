@@ -4,3 +4,9 @@ __pycache__
 staticfiles/
 
 # environment vsriables
+.env.local
+venv
+__pycache__
+db.sqlite3
+staticfiles
+.env
