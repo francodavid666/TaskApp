@@ -80,22 +80,11 @@ WSGI_APPLICATION = "django_crud_api.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
-'''
+
 DATABASES = {
     "default":
     dj_database_url.config(default="sqlite:///" +
                            os.path.join(BASE_DIR, "db.sqlite3"))
-}
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Por ejemplo, para PostgreSQL
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'HXJMKqdiaQEQQ8Lofn9R',
-        'HOST': 'localhost',  # Cambia esto al host de tu base de datos si es diferente
-        'PORT': '5498',  # Cambia esto al puerto de tu base de datos si es diferente
-    }
 }
 
 
